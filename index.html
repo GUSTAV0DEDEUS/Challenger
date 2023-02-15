@@ -13,88 +13,111 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Desafio Final | Imersão Alura</title>
   </head>
   <body>
-
     <main>
-      <a href="">
-        <img src="assets/img/logo.jpg" alt="Alura Logo">
-        Imersão Dev
+      <a href="" class="logo">
+        <img src="assets/img/logo.png" alt="Alura Logo" />
       </a>
       <article class="social">
-        <div class="social-media">
-          <i></i>
+        <a href="" class="social-media">
+          <i class="fa-brands fa-linkedin-in"></i>
           Linkedin
-        </div>
-        <div class="social-media">
-          <i></i>
+        </a>
+        <a href="" class="social-media">
+          <i class="fa-brands fa-github"></i>
           Github
-        </div>
-        <div class="social-media">
-          <i></i>
-          Outros desafios da imersão
-        </div>
+        </a>
+        <a href="" class="social-media">
+          <i class="fa-solid fa-trophy"></i>
+          Desafios da imersão
+        </a>
       </article>
       <section class="container">
         <div class="wrapper">
-           <h1>Home</h1>
-           <p>Seja bem vindo Dkl1n, adicione  suas partidas em sua home page</p>
+          <div class="text">
+            <h1>Home</h1>
+            <p>Seja bem vindo Dkl1n</p>
+          </div>
           <div class="content">
             <div class="card-primary">
               <h3>1.4 KDA</h3>
               <p class="alert">Você está com um indice positivo</p>
-              <img src="" alt="">
+              <img src="assets/img/yasuo.png" alt="Yasuo, personagem do league of legends" />
             </div>
             <div class="card-secondary">
-               <h3>Winrate</h3>
-               <p>Vitória/Derrota</p>
-               <div class="box">
-                 <div class="number"><span></span> 30%</div>
-                 <div class="number">70% <span></span></div>
-                 <div class="line"><span class="win"></span><span class="defeat"></span></div> 
-               </div>
+              <div class="text">
+                <h3>Winrate</h3>
+                <p>Vitória/Derrota</p>
+              </div>
+              <div class="box">
+                <div class="numbers">
+                  <div class="number"><span></span> 30%</div>
+                  <div class="number">70% <span class="red"></span></div>
+                </div>
+                <div class="line">
+                  <span class="win"></span><div class="circle"></div><span class="defeat"></span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="table">
             <h2>Seus Jogos</h2>
+            <div id="list">
+              <div class="list-header">
 
+              </div>
+              <div class="list-body">
+                
+              </div>
+            </div>
           </div>
         </div>
-        <div class="wrapper">
+        <div class="details">
           <div class="info">
-            <img src="" alt="" class="info-avatar">
-            <div class="text">  
+            <img src="assets/img/avatar.jpg" alt="" class="info-avatar" />
+            <div class="text">
               <h3>DKL1N</h3>
               <h4>Mid Laner</h4>
             </div>
           </div>
-          <hr>
+          <hr />
           <div class="actions">
             <div class="actions-header">
               <h4>Ações</h4>
               <div class="saves">
-                <i></i>
+                <i class="fa-solid fa-bookmark"></i>
               </div>
             </div>
-            <button>
-              <div class="icon">
-                <i></i>
-              </div>
-              <div class="text">
-                <h4>Novo Game</h4>
-                <p>Adicione um novo game</p>
-              </div>
-            </button>
-            <button>
-              <div class="icon">
-                <i></i>
-              </div>
-              <div class="text">
-                <h4>Seus games</h4>
-                <p>Você Jogou 20 games</p>
-              </div>
-            </button>
+            <div class="btns">
+              <button>
+                <div class="icon">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="text">
+                  <h4>Novo Game</h4>
+                  <p>Adicione um novo game</p>
+                </div>
+              </button>
+              <button>
+                <div class="icon">
+                  <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="text">
+                  <h4>Seus games</h4>
+                  <p>Você Jogou 20 games</p>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </section>

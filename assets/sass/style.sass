@@ -7,3 +7,299 @@
   margin: 0
   box-sizing: border-box
   font-size: 62.5%
+
+
+body, main
+  width: 100%
+  height: 100vh
+  position: relative 
+  background: variables.$primary-bg-color
+  @include mixins.flex ($direction: row, $justify: initial, $align: center)
+  gap: 40px
+
+main .logo
+  position: absolute
+  top: 20px
+  left: 20px
+  text-decoration: none
+  
+  img
+    width: 160px
+
+main .social
+    flex: 10%
+    @include mixins.flex ($direction: column, $justify: center, $align: initial)
+    padding-left: 20px 
+    gap: 10px
+    
+    &-media
+      display: flex
+      justify-content: flex-start
+      gap: 4px
+
+      text-decoration: none
+      color: black
+      font-size: 1rem
+      transition: .4s
+      
+      &:hover
+        color: white
+      
+      i
+        font-size: 1.4rem
+      
+       
+
+main .container
+  margin-right: 20px
+  flex: 90%
+  height: 90%
+  border-radius: 35px
+  display: flex
+  box-shadow: 0px 38px 15px rgba(0, 19, 51, 0.01), 0px 21px 13px rgba(0, 19, 51, 0.05), 0px 9px 9px rgba(0, 19, 51, 0.09), 0px 2px 5px rgba(0, 19, 51, 0.1), 0px 0px 0px rgba(0, 19, 51, 0.1)  
+  
+  .wrapper
+      background: variables.$secondary-bg-color
+      flex: 80%
+      height: 100%
+      padding: 45px
+      border-radius: 35px 0 0 35px
+      display: grid
+      row-gap: 3rem
+      grid-template-rows: max-content 1fr 2fr
+
+      .text
+        h1
+          font-size: 3rem
+        p
+          font-size: 1.5rem
+          color: variables.$secondary-text-color
+
+      .content
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 10%
+
+        .card-primary
+          position: relative
+          width: calc( 70%/2 - 40px)
+          height: 100%
+          padding: 20px
+
+          border-radius: 15px
+          background: variables.$tertiary-bg-color
+
+          @include mixins.flex ($direction: column, $justify: flex-end, $align: flex-start)
+
+          h3
+            font-size: 4.8rem
+            color: variables.$primary-text-color
+            line-height: 100%
+          p
+            font-size: 1rem
+            color: variables.$primary-text-color
+          
+          img
+            width: 266px
+            position: absolute
+            bottom: -10px
+            left: 40%
+        
+        .card-secondary
+          width: 30%
+          height: 100%
+          padding: 20px
+          @include mixins.flex ($direction: column, $justify:space-between, $align:initial)
+          
+          h3
+            font-size: 2rem
+          
+          p
+            font-size: 1rem
+
+          .box
+            display: flex
+            flex-direction: column
+            gap: .4rem
+            font-size: 1.6rem
+            font-weight: 700
+            
+            .numbers
+              width: 100%
+              display: flex
+              justify-content: space-between
+
+              .number 
+                display: flex
+                align-items: center
+                gap: 5px
+                font-size: 1.4rem
+
+                span
+                  display: block
+                  width: 10px
+                  height: 10px
+                  border-radius: 50%
+                  background: variables.$win
+
+                .red
+                  background: variables.$defeat
+
+          .line
+            width: 100%
+            height: 12px
+            display: flex
+            position: relative      
+
+            .circle
+              position: absolute
+              top: 50%
+              transform: translateY(-50%)
+              left: 29%
+              width: 10px
+              height: 10px
+              border-radius: 50%  
+              background: variables.$primary-text-color    
+
+            .win
+              display: block
+              width: 30%
+              height: 100%
+              border-radius: 16px 0 0 16px
+              background: variables.$win
+            
+            .defeat
+              display: block
+              width: 70%
+              height: 100%
+              border-radius: 0 16px 16px 0
+              background: variables.$defeat
+          
+      .table
+        @include mixins.flex ($direction: column, $justify: flex-start, $align: flex-start)
+        gap:20px
+          
+        h2
+          font-size: 2rem
+
+
+  
+      
+  .details
+    flex: 20%
+    background: variables.$tertiary-bg-color
+    border-radius: 0 35px 35px 0
+    padding: 20px
+    @include mixins.flex ($direction: column, $justify: center, $align: initial)
+
+    .info
+      @include mixins.flex ($direction: column, $justify: center, $align: center)
+      gap: 20px
+      
+      img
+        width: 166px
+        border-radius: 50%
+      
+      .text
+        text-align: center
+        
+        h3
+          font-size: 3.6rem
+          color: variables.$primary-text-color
+          font-weight: 600
+          line-height: 90%
+        
+        h4
+          font-size: 1.6rem
+          color: rgba(255, 255, 255, 0.4)
+          font-weight: 300
+          margin-bottom: 2rem 
+
+    hr
+      height: 1px
+      background: variables.$primary-text-color
+      border: 0
+      outline: 0
+      margin-bottom: 20px
+    
+    .actions
+      @include mixins.flex ($direction: column, $justify: initial, $align: flex-start)
+      gap: 20px
+
+      &-header
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+        h4
+          font-size: 1.4rem
+          color: variables.$primary-text-color
+          font-weight: 600
+
+        .saves
+          width: 35px
+          height: 35px
+          background: variables.$primary-text-color
+          border-radius: 50%
+          display: flex
+          justify-content: center
+          place-items: center
+          position: relative
+
+          i
+            font-size: 1.6rem
+
+          i:after
+            content: ""
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background: variables.$tertiary-bg-color
+            top: 5px
+            right: 9px
+            position: absolute
+
+
+      .btns
+        @include mixins.flex ($direction: column, $justify: initial, $align: flex-start)
+        gap: 10px
+        width: 100%
+
+        button 
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          gap: 10px
+          padding: 15px 10px 
+          border-radius: 10px
+          border: 0
+          outline: 0
+          cursor: pointer
+
+          .icon
+            width: 35px
+            height: 35px
+            border-radius: 5px
+            display: flex
+            justify-content: center
+            align-items: center
+
+            background: #FFD143
+            opacity: 0.4
+            
+            i
+              font-size: 1.4rem
+
+          .text
+            text-align: left
+
+            h4
+              font-size: 1.4rem      
+
+            p
+              font-size: 1rem        
+
+
