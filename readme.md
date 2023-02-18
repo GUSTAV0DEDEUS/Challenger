@@ -1,27 +1,30 @@
-<h1 align="center"> Bora Code Sexto Desafio </h1>
+<h1 align="center"> Desafio Final | Imersão dev </h1>
 <img  src="assets/img/gif.gif" width="100%">
 
 # Diário de bordo 
 
 | DIA | HORAS|
 |---|---|
-| 08/02 | 1h 54m | 
+| 15/02 | 2h 44m | 
+| 17/02 | 2h 16m | 
+| 18/02 | 2h | 
 
 ## Tempo codando cada arquivo wakatime
 
-| HTML | CSS | JavaScript|
-|---|---|---|
-| 1h 18m | 36m | 0 |
+| HTML | SASS | JavaScript| Figma |
+|---|---|---|---|
+| 1h | 3h | 1h | 2h 
 
 # Projeto
 
-Esse é o sexto desafio do bora code, tendo como intuito de cria um cartão de embarque.
+Um desafio elaborado com todos os conhecimentos adquiridos na imersão dev
 
 # Link
 
-> <https://gustav0dedeus.github.io/BoraCode-6/>
+> <https://gustav0dedeus.github.io/Challenger/>
 
 # Linguagens
 
 * <h2>HTML</h2>
-* <h2>CSS</h2>
+* <h2>SASS</h2>
+* <h2>JS</h2>
