@@ -194,6 +194,103 @@ main .container .wrapper .table {
 main .container .wrapper .table h2 {
   font-size: 2rem;
 }
+main .container .wrapper .table #list {
+  width: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 10px;
+}
+main .container .wrapper .table #list .list-header {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+}
+main .container .wrapper .table #list .list-header .header {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #94918A;
+}
+main .container .wrapper .table #list .list-body {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .container .wrapper .table #list .list-body .item {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+}
+main .container .wrapper .table #list .list-body .item .col2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .container .wrapper .table #list .list-body .item .col2 h3 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 2rem;
+}
+main .container .wrapper .table #list .list-body .item .col2 h4 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #94918A;
+}
+main .container .wrapper .table #list .list-body .item .col2 img {
+  width: 53px;
+  height: 53px;
+  border-radius: 10px;
+}
+main .container .wrapper .table #list .list-body .item .col1 {
+  display: flex;
+  align-items: center;
+}
+main .container .wrapper .table #list .list-body .item .col1 p {
+  font-size: 1.7rem;
+}
+main .container .wrapper .table #list .list-body .item .col1 p span {
+  font-size: 1.7rem;
+}
+main .container .wrapper .table #list .list-body .item .col1 .text-secondary {
+  color: #DD1431;
+}
+main .container .wrapper .table #list .list-body .item .col1 .defeat {
+  display: block;
+  width: 80px;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #DD1431;
+  border-radius: 10px;
+}
+main .container .wrapper .table #list .list-body .item .col1 .win {
+  display: block;
+  width: 80px;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(5, 77, 110, 0.8);
+  border-radius: 10px;
+}
+main .container .wrapper .table #list .list-body .item .col1 input {
+  display: none;
+}
+main .container .wrapper .table #list .list-body .item .col1 label {
+  padding-left: 1rem;
+  transition: 0.6s;
+}
+main .container .wrapper .table #list .list-body .item .col1 label:hover {
+  cursor: pointer;
+  color: yellow;
+}
+main .container .wrapper .table #list .list-body .item .col1 label i {
+  font-size: 2rem;
+}
 main .container .details {
   flex: 20%;
   background: #127369;
@@ -319,6 +416,100 @@ main .container .details .actions .btns button .text h4 {
 }
 main .container .details .actions .btns button .text p {
   font-size: 1rem;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), radial-gradient(95.31% 180.52% at 91.77% 95.02%, #10403B 0%, #127369 0.01%, rgba(18, 115, 105, 0.2) 100%);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-content: center;
+  animation: fade 0.6s forwards alternate;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal .inputs {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal .inputs-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.modal .inputs-area .input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal .inputs-area .input label {
+  font-size: 1.4rem;
+}
+.modal .inputs-area .input input {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.modal .inputs-area .placar {
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
+}
+.modal .inputs .input2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.modal .inputs .input2 label {
+  font-size: 1.4rem;
+}
+.modal .inputs .input2 input {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.modal .inputs .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.modal .inputs .btns .btn {
+  padding: 10px 20px;
+  outline: 0;
+  border: 0;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.modal .inputs .btns .btn:hover, .modal .inputs .btns .btn:focus {
+  filter: grayscale(50%);
+}
+.modal .inputs .btns .btn:first-child {
+  background: green;
+}
+.modal .inputs .btns .btn:last-child {
+  background: red;
 }
 
 /*# sourceMappingURL=style.css.map */

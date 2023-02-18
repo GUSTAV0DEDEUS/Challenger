@@ -182,9 +182,96 @@ main .container
           
         h2
           font-size: 2rem
+        
+        #list
+          width: 100%
+          display: grid
+          grid-template-rows: max-content 1fr
+          gap: 10px          
+          .list-header
+            display: grid
+            grid-template-columns: 2fr repeat(5, 1fr)
 
+            .header
+              font-family: 'Poppins'
+              font-weight: 500
+              font-size: 1.5rem
+              color: variables.$secondary-text-color
+          
+          .list-body
+            width: 100%
+            height: 300px
+            overflow: auto
+            display: flex
+            flex-direction: column
+            gap: 30px
+ 
+            .item 
+              display: grid
+              grid-template-columns: 2fr repeat(5, 1fr)
 
-  
+              .col2
+                height: 100%
+                display: flex
+                align-items: center
+                gap: 20px
+
+                h3
+                  font-family: 'Poppins'
+                  font-weight: 500
+                  font-size: 2rem
+                h4
+                  font-family: 'Poppins'
+                  font-weight: 500
+                  font-size: 1.4rem
+                  color: variables.$secondary-text-color
+                img
+                  width: 53px
+                  height: 53px
+                  border-radius: 10px
+
+              .col1
+                display: flex
+                align-items: center
+
+                p
+                  font-size: 1.7rem
+                  span
+                    font-size: 1.7rem
+
+                .text-secondary
+                  color: variables.$defeat
+                
+                .defeat
+                  display: block
+                  width: 80px
+                  text-align: center
+                  padding: 5px 0
+                  font-size: 1.2rem
+                  color: variables.$primary-text-color
+                  background: variables.$defeat
+                  border-radius: 10px
+
+                .win
+                  display: block
+                  width: 80px
+                  text-align: center
+                  padding: 5px 0
+                  font-size: 1.2rem
+                  color: variables.$primary-text-color
+                  background: variables.$win
+                  border-radius: 10px
+                
+                input 
+                  display: none
+                label
+                  padding-left: 1rem
+                  transition: .6s
+                  &:hover
+                    cursor: pointer
+                    color: yellow
+                  i
+                    font-size: 2rem
       
   .details
     flex: 20%
@@ -303,3 +390,91 @@ main .container
               font-size: 1rem        
 
 
+.modal
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: variables.$primary-bg-color
+  width: 100%
+  height: 100vh
+  display: none
+  justify-content: center
+  align-content: center
+  animation: fade .6s forwards alternate
+  @keyframes fade
+      from
+        opacity: 0
+      to
+        opacity: 1
+
+  .inputs
+    background: white
+    padding: 20px
+    border-radius: 10px
+    display: flex
+
+    flex-direction: column
+    gap: 20px
+
+    &-area 
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 40px
+
+      .input
+        display: flex
+        flex-direction: column
+        gap: 10px
+        
+        label
+          font-size: 1.4rem
+        
+        input
+          padding: 10px
+          border: 1px solid #000
+          border-radius: 4px
+          font-size: 1rem
+      
+      .placar
+        display: flex
+        gap: 10px
+        font-size: 2rem
+    
+    .input2
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 10px
+      
+      label
+        font-size: 1.4rem
+      input
+          padding: 10px
+          border: 1px solid #000
+          border-radius: 4px
+          font-size: 1rem
+    
+    .btns
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 10px
+
+      .btn
+        padding: 10px 20px
+        outline: 0
+        border: 0
+        font-size: 1.2rem
+        color: white
+        border-radius: 6px
+        cursor: pointer
+        transition: .6s
+        &:hover, &:focus
+          filter: grayscale(50%)
+        &:first-child
+          background: green
+        &:last-child
+          background: red
+
+      
